@@ -4,6 +4,7 @@ app/
 .bash-logout
 .bashrc
 .cache/
+.config/
 .dbus/
 Desktop
 Documents/
