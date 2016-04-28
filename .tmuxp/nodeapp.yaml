@@ -1,0 +1,18 @@
+session_name: brian
+windows:
+- focus: 'true'
+  layout: 8fb4,159x67,0,0{66x67,0,0,1,42x67,67,0,2,49x67,110,0[49x33,110,0,3,49x33,110,34,4]}
+  options:
+    automatic-rename: 'off'
+  panes:
+  - shell_command:
+      - "wmctrl -r :ACTIVE: -b add,fullscreen"
+      - "ls -lash"
+  - shell_command:
+      - "sudo node /home/pi/app/meep-robot/meep.js"
+  - shell_command:
+      - "htop"
+  - shell_command:
+      - "sudo iftop"
+  start_directory: /home/pi/app
+  window_name: python
