@@ -1,0 +1,34 @@
+session_name: start
+windows:
+- focus: 'true'
+  layout: edae,204x51,0,0{103x51,0,0,1,100x51,104,0,4}
+  options:
+    automatic-rename: 'off'
+  panes:
+  - shell_command:
+    - cd /home/pi/dev
+  - focus: 'true'
+    shell_command:
+    - cd /home/pi
+    - bash
+  window_name: start
+- layout: e543,204x51,0,0{102x51,0,0,5,101x51,103,0,6}
+  options: {}
+  panes:
+  - bash
+  - focus: 'true'
+    shell_command: bash
+  start_directory: /home/pi
+  window_name: edit
+- layout: 36d0,204x51,0,0{102x51,0,0,8,101x51,103,0[101x25,103,0,9,101x25,103,26,10]}
+  options: {}
+  panes:
+    - shell_command:
+        - htop
+    - shell_command:
+        - sudo iftop
+    - shell_command:
+        - cd /home/pi/dev
+        - ./ngrok tcp 22
+  start_directory: /home/pi
+  window_name: ops
