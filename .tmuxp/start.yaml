@@ -1,4 +1,4 @@
-session_name: start
+bsession_name: start
 windows:
 - focus: 'true'
   layout: edae,204x51,0,0{103x51,0,0,1,100x51,104,0,4}
@@ -7,10 +7,10 @@ windows:
   panes:
   - shell_command:
     - cd /home/pi/dev
-  - focus: 'true'
+    - chromium-browser --noerrdialogs --hide-scrollbars --kiosk --disable-overlay-scrollbar --incognito https://ulx.io
     shell_command:
     - cd /home/pi
-    - bash
+    - "wmctrl -r :ACTIVE: -b add,fullscreen"
   window_name: start
 - layout: e543,204x51,0,0{102x51,0,0,5,101x51,103,0,6}
   options: {}
